@@ -3,7 +3,7 @@
 <%= link_to "投稿画面へ", new_user_path %>
 
 <% @user.each do |user| %>
-  <p><%= user.name %> - <%= user.age %>
+  <p><%= user.name %> - <%= user.age %> - <%= user.address %>
      <%= link_to "編集", edit_user_path(user), method: :get %> |
      <%= link_to "削除", user_path(user), method: :delete, data: { confirm: "Are you sure?" } %>
   <p>
