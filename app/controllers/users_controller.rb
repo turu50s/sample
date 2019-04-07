@@ -13,6 +13,10 @@ class UsersController < ApplicationController
     redirect_to :action => "index"
   end
 
+  def show
+    @user = User.find(params[:id])
+  end
+
   def edit
     @user = User.find(params[:id])
   end
@@ -29,8 +33,19 @@ class UsersController < ApplicationController
     redirect_to :action => "index"
   end
 
-  private
-  def user_params
-    params.require(:user).permit(:name, :age, :address)
+  def search
+    # user_search = UserSearch.new(params_user_search)
+    # @users = user_search.execute
+    @q = User.ransack(params[:q])
+    @users = @q.result
   end
+
+  private
+    def user_params
+      params.require(:user).permit(:name, :age, :address, :image)
+    end
+    
+    def params_user_search
+      params.permit(:search_name, :search_age, :search_address)
+    end
 end

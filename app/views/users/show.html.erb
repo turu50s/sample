@@ -1,0 +1,4 @@
+<p>お名前:<%= @user.name %></p>  
+<p>年齢:<%= @userage %></p>
+<p>住所:<%= @user.address %></p>
+<p>画像:<%= image_tag @user.image_url(:thumb) if @user.image_url %></p>

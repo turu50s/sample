@@ -46,9 +46,17 @@ gem 'rb-readline'
 
 gem 'colorize'
 
+#管理者画面
 gem 'activeadmin'
 gem 'devise'
 gem 'rails-i18n'
+
+#検索機能
+gem 'ransack'
+
+#画像
+gem 'carrierwave'
+gem 'rmagick'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

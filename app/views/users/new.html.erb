@@ -3,5 +3,6 @@
   <p>お名前:<%= f.text_field :name %></p>
   <p>年齢:<%= f.text_field :age %></p>
   <p>住所:<%= f.text_field :address %></p>
-  <%= f.submit %>
+  <p>画像:<%= f.file_field :image %></p>
+  <%= f.submit '登録' %>
 <% end %>

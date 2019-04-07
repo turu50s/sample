@@ -8,5 +8,9 @@ Rails.application.routes.draw do
   # get '/users/:id/edit', to: 'users#edit'
   # patch '/users/:id', to: 'users#update'
   # delete '/users/:id', to: 'users#destroy'
-  resources :users, except: [:show]
+  
+  # resources :users, except: [:show]
+  resources :users
+
+  get '/users/search', to: 'users#search'
 end

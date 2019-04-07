@@ -3,6 +3,8 @@ ja:
   activerecord:
     models:
       user: 'ユーザー'
+      comment: 'コメント'
+      admin_user: '管理者'
     attributes:
       user:
         name: '名前'
